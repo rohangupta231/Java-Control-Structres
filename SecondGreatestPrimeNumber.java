@@ -1,0 +1,52 @@
+class SecondGreatestPrimeNumber
+{
+	public static void main(String dt[])
+	{
+		int a=71,num=0,i=2,temp=num,count=0,gre=0,secgre=0;
+		while(num<a)
+		{	
+			count=0;
+			i=2;
+			while(i<=num/2)
+			{	
+				if(num%i==0)
+				{
+					count=1;
+				}
+				i++;
+			}		
+			if(count==0)
+			{
+				//System.out.print("\n"+num);
+				if(gre<num)
+				{
+					gre=num;
+				}
+			}	
+			num++;
+		}
+		num=0;
+		while(num<gre)
+		{
+			count=0;
+			i=2;
+			while(i<=num/2)
+			{
+				if(num%i==0)
+				{
+					count=1;
+				}
+				i++;
+			}
+			if(count==0)
+			{
+				if(secgre<num)
+				{
+					secgre=num;
+				}
+			}
+			num++;
+		}
+		System.out.print("Second Greatest Prime Number is "+secgre);
+	}
+}
